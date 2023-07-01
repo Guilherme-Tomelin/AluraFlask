@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+{% block conteudo %}
+        <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Nível</th>
+                    <th>Criador</th>
+                    <th>Lançamento</th>
+                    <th>Categorias</th>
+                    <th>Recursos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tecnologia in tecnologias %}
+                <tr>
+                    <td>{{tecnologia.nome}}</td>
+                    <td>{{tecnologia.descricao}}</td>
+                    <td>{{tecnologia.nivel}}</td>
+                    <td>{{tecnologia.criador}}</td>
+                    <td>{{tecnologia.ano_lancamento}}</td>
+                    <td>{{tecnologia.categorias}}</td>
+                    <td>{{tecnologia.recursos}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
